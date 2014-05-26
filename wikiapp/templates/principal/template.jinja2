@@ -1,0 +1,29 @@
+{% extends "/templates/general/template_general.jinja2" %}
+{% block content %}
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{request.route_url('home')}}"> FecyWiki </a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{{request.route_url('home')}}">Inicio</a></li>
+				<li><a href="{{request.route_url('acerca')}}">Acerca de</a></li>
+			</ul>
+		</div>
+	</div>
+</div>  
+<div class="content">
+	{% block contenido %}{% endblock %}
+</div>
+{% endblock %}              
+{% block footer %}
+	<p style="text-align:center">&copy; Copyright 2014 by Fecy</p>            
+{% endblock %}
+      

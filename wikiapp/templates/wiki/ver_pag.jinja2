@@ -1,0 +1,27 @@
+{% extends "template.jinja2" %}
+{% block title %}Ver Pagina{% endblock %}
+{% block contenido %}
+	<hr>
+	<hr>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="container" style="text-align: center">
+				<h1>Ver Pagina</h1>
+				<h2>{{pagina.nombre}}</h2>
+				<p>{{pagina.detalle}}</p>
+				<form >
+					<div class="pull-left">
+						<button class="btn btn-primary" type="submit" name="regresa">Regresar</button>
+					</div>
+					{% if permiso==True%}
+						<div class="pull-right">
+							<button class="btn btn-primary" type="submit" name="edita">Editar</button>
+							<button class="btn btn-danger" type="submit" name="elimina">Eliminar</button>
+						</div>
+					{% endif %}					
+				</form>
+				
+			</div>
+		</div>
+	</div>
+{% endblock %}

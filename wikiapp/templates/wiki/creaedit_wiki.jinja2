@@ -1,0 +1,29 @@
+{% extends "template.jinja2" %}
+{% block title %}Crear Página{% endblock %}
+{% block contenido %}
+	<hr>
+	<hr>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="container">
+				<h1 style="text-align: center">{{titulo}}</h1>
+				<form role="form" method='POST'>
+					<div class="form-group">
+						<label for="nom">Titulo:</label>
+						<input type="text" name="nombre" class="form-control" placeholder="Titulo de la página" value="{{pagina.nombre}}">
+					</div>
+					<div class="form-group">
+						<label for="det">Detalle:</label>
+						<textarea class="form-control" name="detalle" rows="3" placeholder="Detalle de la página">{{pagina.detalle}}</textarea>
+					</div>					
+					<div class="pull-right">
+						<button type="submit" name='guarda' class="btn btn-primary">Guardar</button>
+					</div>
+					<div class="pull-left">
+						<button type="submit" name='cancela' class="btn btn-primary">Cancelar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

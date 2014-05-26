@@ -1,0 +1,22 @@
+{% extends "template.jinja2" %}
+{% block title %}Ver Wiki{% endblock %}
+{% block contenido %}
+	<hr>
+	<hr>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="container">
+				<h1 style="text-align: center">Ver wiki</h1>
+				{% if paginas %}
+				<ul>
+				{% for p in paginas %}
+					<li><a href="{{request.route_url('ver_pag', uid=p.uid)}}">{{ p.nombre }}</a></li>
+				{% endfor %}
+				</ul>
+				{% else %}
+				<p>No hay registros</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

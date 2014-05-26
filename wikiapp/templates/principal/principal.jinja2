@@ -1,0 +1,15 @@
+{% extends "template.jinja2" %}
+{% block title %}Inicio{% endblock %}
+{% block contenido %}
+<div class="container">
+    <form class="form-signin" role="form" method='POST'>
+            <h2 class="form-signin-heading">Sesión</h2>
+            <input class="form-control" placeholder="Usuario" required="true" type="text" name="login">
+            <input class="form-control" placeholder="Contraseña" required="true" type="password" name="password">
+            <label class="checkbox">
+                <input value="remember-me" type="checkbox"> Recordarme
+            </label>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" name="ingreso">Ingresar</button>
+    </form>
+</div>
+{% endblock %}
